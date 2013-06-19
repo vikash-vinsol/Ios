@@ -7,12 +7,18 @@
 //
 
 #import "contactlistViewController.h"
+#import "person.h"
+#import "persondetailsViewController.h"
 
-@interface contactlistViewController ()
+@interface contactlistViewController () 
+
+@property (strong) NSArray *people;
 
 @end
 
-@implementation contactlistViewController
+@implementation contactlistViewController 
+
+@synthesize people;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +32,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+person *p1=[[person alloc] initWithfname:@"vikash" sname:@"soni" color:[UIColor greenColor] age:22];
+person *p2 = [[person alloc]initWithfname:@"Nishant" sname:@"Tuteja" color:[UIColor blueColor] age:23];
+person *p3= [[person alloc] initWithfname:@"abhishek" sname:@"jain" color:[UIColor yellowColor] age:24];
+person *p4 = [[person alloc]initWithfname:@"aayush" sname:@"khandelwal" color:[UIColor grayColor] age:22];
+   
+    
+   self.people = [NSArray arrayWithObjects:p1,p2,p3,p4,nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -34,6 +48,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+{
+    if ([segue.identifier isEqualToString:@"Persondetailsegue"])
+    {
+        UITableViewCell *cell = (UITableViewCell *)sender;
+        NSIndexPath *ip =  [self.tableView indexPathForCell:cell];
+        
+        person *p = [self.people objectAtIndex:ip.row];
+        persondetailsViewController *pdv = (persondetailsViewController *)segue.destinationViewController;
+        pdv.person = p;
+    }
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -44,16 +71,16 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
-    return 0;
+    return [self.people count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +88,9 @@
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    person *p = [self.people objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = p.fname;
     
     return cell;
 }

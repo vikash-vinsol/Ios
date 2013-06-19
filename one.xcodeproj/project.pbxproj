@@ -18,6 +18,10 @@
 		EB66686A175DCD46008C3D2A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EB666869175DCD46008C3D2A /* Default-568h@2x.png */; };
 		EB66686D175DCD46008C3D2A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB66686B175DCD46008C3D2A /* MainStoryboard.storyboard */; };
 		EB666870175DCD46008C3D2A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB66686F175DCD46008C3D2A /* ViewController.m */; };
+		EBDA573B175DFF9E00A52FD7 /* scene2ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA573A175DFF9E00A52FD7 /* scene2ViewController.m */; };
+		EBDA573E175E0C0700A52FD7 /* contactlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA573D175E0C0700A52FD7 /* contactlistViewController.m */; };
+		EBDA5741175E12C000A52FD7 /* person.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA5740175E12C000A52FD7 /* person.m */; };
+		EBDA5747175E313800A52FD7 /* persondetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA5746175E313800A52FD7 /* persondetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,14 @@
 		EB66686C175DCD46008C3D2A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		EB66686E175DCD46008C3D2A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EB66686F175DCD46008C3D2A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EBDA5739175DFF9E00A52FD7 /* scene2ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scene2ViewController.h; sourceTree = "<group>"; };
+		EBDA573A175DFF9E00A52FD7 /* scene2ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scene2ViewController.m; sourceTree = "<group>"; };
+		EBDA573C175E0C0700A52FD7 /* contactlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contactlistViewController.h; sourceTree = "<group>"; };
+		EBDA573D175E0C0700A52FD7 /* contactlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contactlistViewController.m; sourceTree = "<group>"; };
+		EBDA573F175E12C000A52FD7 /* person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = person.h; sourceTree = "<group>"; };
+		EBDA5740175E12C000A52FD7 /* person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = person.m; sourceTree = "<group>"; };
+		EBDA5745175E313800A52FD7 /* persondetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = persondetailsViewController.h; sourceTree = "<group>"; };
+		EBDA5746175E313800A52FD7 /* persondetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = persondetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,14 @@
 				EB66686E175DCD46008C3D2A /* ViewController.h */,
 				EB66686F175DCD46008C3D2A /* ViewController.m */,
 				EB66685A175DCD46008C3D2A /* Supporting Files */,
+				EBDA5739175DFF9E00A52FD7 /* scene2ViewController.h */,
+				EBDA573A175DFF9E00A52FD7 /* scene2ViewController.m */,
+				EBDA573C175E0C0700A52FD7 /* contactlistViewController.h */,
+				EBDA573D175E0C0700A52FD7 /* contactlistViewController.m */,
+				EBDA573F175E12C000A52FD7 /* person.h */,
+				EBDA5740175E12C000A52FD7 /* person.m */,
+				EBDA5746175E313800A52FD7 /* persondetailsViewController.m */,
+				EBDA5745175E313800A52FD7 /* persondetailsViewController.h */,
 			);
 			path = one;
 			sourceTree = "<group>";
@@ -176,6 +196,10 @@
 				EB666860175DCD46008C3D2A /* main.m in Sources */,
 				EB666864175DCD46008C3D2A /* AppDelegate.m in Sources */,
 				EB666870175DCD46008C3D2A /* ViewController.m in Sources */,
+				EBDA573B175DFF9E00A52FD7 /* scene2ViewController.m in Sources */,
+				EBDA573E175E0C0700A52FD7 /* contactlistViewController.m in Sources */,
+				EBDA5741175E12C000A52FD7 /* person.m in Sources */,
+				EBDA5747175E313800A52FD7 /* persondetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +322,7 @@
 				EB666875175DCD46008C3D2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,4 +10,13 @@
 
 @interface person : NSObject
 
+
+@property(strong) NSString *fname;
+@property(strong) NSString *Sname;
+@property(strong) UIColor *favoritecolor;
+@property int age;
+
+
+-(id)initWithfname:(NSString *)afname sname :(NSString *)aSname color :(UIColor *)col age :(int)aAge;
+
 @end

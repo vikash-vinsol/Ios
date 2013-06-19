@@ -10,4 +10,8 @@
 
 @interface scene2ViewController : UIViewController
 
+
+
+-(IBAction)cancel:(id)sender;
+
 @end
