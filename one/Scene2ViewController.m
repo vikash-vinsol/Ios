@@ -1,29 +1,25 @@
 //
-//  persondetailsViewController.m
+//  scene2ViewController.m
 //  one
 //
 //  Created by Vikash Soni on 04/06/13.
 //  Copyright (c) 2013 Vikash Soni. All rights reserved.
 //
 
-#import "persondetailsViewController.h"
+#import "Scene2ViewController.h"
 
-@interface persondetailsViewController ()
+@interface Scene2ViewController ()
 
 @end
 
-
-@implementation persondetailsViewController
-
-@synthesize fnamelabel,snamelabel,agelabel,person;
+@implementation Scene2ViewController
 
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
+    if (self) {
         // Custom initialization
     }
     return self;
@@ -31,14 +27,9 @@
 
 - (void)viewDidLoad
 {
-    
-    self.fnamelabel.text = self.person.fname;
-    self.snamelabel.text = self.person.Sname;
-    self.agelabel.text = [NSString stringWithFormat:@"%d", self.person.age];
-    
-    [self.view setBackgroundColor:self.person.favoritecolor];
-    
     [super viewDidLoad];
+
+    
 	// Do any additional setup after loading the view.
 }
 
@@ -47,5 +38,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 @end

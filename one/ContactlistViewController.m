@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 Vikash Soni. All rights reserved.
 //
 
-#import "contactlistViewController.h"
-#import "person.h"
-#import "persondetailsViewController.h"
+#import "ContactlistViewController.h"
+#import "Person.h"
+#import "PersonDetailsViewController.h"
 
-@interface contactlistViewController () 
+@interface ContactlistViewController () 
 
 @property (strong) NSArray *people;
 
 @end
 
-@implementation contactlistViewController 
+@implementation ContactlistViewController 
 
 @synthesize people;
 
@@ -33,10 +33,10 @@
 {
     [super viewDidLoad];
     
-person *p1=[[person alloc] initWithfname:@"vikash" sname:@"soni" color:[UIColor greenColor] age:22];
-person *p2 = [[person alloc]initWithfname:@"Nishant" sname:@"Tuteja" color:[UIColor blueColor] age:23];
-person *p3= [[person alloc] initWithfname:@"abhishek" sname:@"jain" color:[UIColor yellowColor] age:24];
-person *p4 = [[person alloc]initWithfname:@"aayush" sname:@"khandelwal" color:[UIColor grayColor] age:22];
+Person *p1=[[Person alloc] initWithfname:@"vikash" sName:@"soni" color:[UIColor greenColor] age:22];
+Person *p2 = [[Person alloc]initWithfname:@"Nishant" sName:@"Tuteja" color:[UIColor blueColor] age:23];
+Person *p3= [[Person alloc] initWithfname:@"abhishek" sName:@"jain" color:[UIColor yellowColor] age:24];
+Person *p4 = [[Person alloc]initWithfname:@"aayush" sName:@"khandelwal" color:[UIColor grayColor] age:22];
    
     
    self.people = [NSArray arrayWithObjects:p1,p2,p3,p4,nil];
@@ -56,8 +56,8 @@ person *p4 = [[person alloc]initWithfname:@"aayush" sname:@"khandelwal" color:[U
         UITableViewCell *cell = (UITableViewCell *)sender;
         NSIndexPath *ip =  [self.tableView indexPathForCell:cell];
         
-        person *p = [self.people objectAtIndex:ip.row];
-        persondetailsViewController *pdv = (persondetailsViewController *)segue.destinationViewController;
+        Person *p = [self.people objectAtIndex:ip.row];
+        PersonDetailsViewController *pdv = (PersonDetailsViewController *)segue.destinationViewController;
         pdv.person = p;
     }
 }
@@ -88,9 +88,9 @@ person *p4 = [[person alloc]initWithfname:@"aayush" sname:@"khandelwal" color:[U
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    person *p = [self.people objectAtIndex:indexPath.row];
+    Person *p = [self.people objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = p.fname;
+    cell.textLabel.text = p.fName;
     
     return cell;
 }

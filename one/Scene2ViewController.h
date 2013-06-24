@@ -1,5 +1,5 @@
 //
-//  contactlistViewController.h
+//  scene2ViewController.h
 //  one
 //
 //  Created by Vikash Soni on 04/06/13.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface contactlistViewController : UITableViewController
+@interface Scene2ViewController : UIViewController
+
+
 
 @end

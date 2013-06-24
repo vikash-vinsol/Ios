@@ -1,5 +1,5 @@
 //
-//  scene2ViewController.h
+//  contactlistViewController.h
 //  one
 //
 //  Created by Vikash Soni on 04/06/13.
@@ -8,10 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface scene2ViewController : UIViewController
-
-
-
--(IBAction)cancel:(id)sender;
+@interface ContactlistViewController : UITableViewController
 
 @end

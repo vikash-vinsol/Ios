@@ -1,25 +1,29 @@
 //
-//  scene2ViewController.m
+//  persondetailsViewController.m
 //  one
 //
 //  Created by Vikash Soni on 04/06/13.
 //  Copyright (c) 2013 Vikash Soni. All rights reserved.
 //
 
-#import "scene2ViewController.h"
+#import "PersonDetailsViewController.h"
 
-@interface scene2ViewController ()
+@interface PersonDetailsViewController ()
 
 @end
 
-@implementation scene2ViewController
+
+@implementation PersonDetailsViewController
+
+@synthesize fNameLabel,sNameLabel,ageLabel,person;
 
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -27,9 +31,14 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-
     
+    self.fNameLabel.text = self.person.fName;
+    self.sNameLabel.text = self.person.sName;
+    self.ageLabel.text = [NSString stringWithFormat:@"%d", self.person.age];
+    
+    [self.view setBackgroundColor:self.person.favoriteColor];
+    
+    [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
@@ -37,13 +46,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-
--(IBAction)cancel:(id)sender
-{
-    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
