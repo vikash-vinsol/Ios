@@ -10,6 +10,7 @@
 
 @implementation Person
 @synthesize fName,sName, favoriteColor,age;
+
 -(id)initWithfname:(NSString *)afName sName :(NSString *)aSName color :(UIColor *)col age :(int)aAge
 
 {
